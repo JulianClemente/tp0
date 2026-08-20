@@ -37,8 +37,7 @@ int esperar_cliente(int socket_servidor)
 	// Quitar esta línea cuando hayamos terminado de implementar la funcion
 
 	// Aceptamos un nuevo cliente
-	accept(socket_servidor, NULL, NULL);
-	int socket_cliente = socket(hints);
+	int socket_cliente = accept(socket_servidor, NULL, NULL);
 	log_info(logger, "Se conecto un cliente!");
 
 	return socket_cliente;
